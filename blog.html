@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>UpStyle - Blog</title>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Font -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/elegant-font.css">
+	<!-- SCROLL BAR MOBILE MENU
+  		================================================== -->
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
+	<!-- Main Style -->
+	<link rel="stylesheet" href="style.css">
+	<!-- color scheme -->
+	<link rel="stylesheet" href="switcher/demo.css" type="text/css">
+	<link rel="stylesheet" href="switcher/colors/yellow.css" type="text/css" id="colors">
+	<!-- Favicons
+		  ================================================== -->
+	<link rel="shortcut icon" href="favicon.png">
+</head>
+
+<body>
+
+	<!-- End Switcher Color -->
+	<div class="mobile-menu-first">
+		<div id="mobile-menu" class="mobile-menu">
+			<div class="header-mobile-menu">
+				<a href="#">TOLL FREE: 800 345 6889</a>
+				<div class="mm-toggle">
+					<span aria-hidden="true" class="icon_close"></span>
+				</div>
+			</div> <!-- Mobile Menu -->
+			<div class="mCustomScrollbar light" data-mcs-theme="minimal-dark">
+
+				<ul>
+					<li>
+						<a href="index.html"><i class="icon-home"></i> Home</a>
+					</li>
+
+					<li><a href="project.html"><span>Projects</span></a>
+					</li>
+
+					<li><a href="service.html"><span>Services</span></a>
+					</li>
+					<li><a href="about.html"><span>About </span></a></li>
+
+					<li><a href="blog.html"><span>Blog</span></a>
+					</li>
+					<li><a href="contact.html"><span>Contact Us</span></a>
+					</li>
+				</ul>
+				<div class="footer-mobile-menu">
+					<ul class="social">
+						<li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+						<li class="youtube"><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+						<li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+					</ul>
+
+					<ul class="address-footer-mobile">
+						<li>
+							<p> 8th floor, 379 Hudson St, New York, NY 10018</p>
+						</li>
+						<li>
+							<p>1-800-123-6879 </p>
+						</li>
+						<li>
+							<p> contact@arc.com</p>
+						</li>
+
+					</ul>
+				</div>
+			</div> <!-- /#rmm   -->
+		</div>
+	</div><!-- End Mobile Menu -->
+
+	<div class="modal fade modal-search" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<button type="button" class="close" data-dismiss="modal">×</button>
+		<div class="modal-dialog myModal-search">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-body">
+					<form role="search" method="get" class="search-form">
+						<input class="search-field" placeholder="Search here..." value="" title="" type="search">
+						<button type="submit" class="search-submit"><i class="fa fa-search"></i></button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Modal Search-->
+	<div id="page">
+		<div id="skrollr-body">
+			<header id="mainmenu" class="header-v1 header-border header-fix header-bg-white"
+				data-0="padding:10px;padding-left:40px;padding-right:40px;"
+				data-251="padding:10px; padding-left:40px;padding-right:40px;top:0;">
+				<div id="info" class="topbar topbar-position topbar-dark hide-topbar" data-0="height:30px"
+					data-251="height:0;">
+
+					<div class="col-md-12">
+						<p class="text-cap hidden-xs">TOLL FREE: 800 345 6889</p>
+						<p class="text-cap">E-mail: contact@arc.com</p>
+						<div class="language">
+							<a href="#" class="active">EN</a>
+							<a href="#">FR</a>
+							<a href="#">PT</a>
+						</div>
+					</div>
+
+				</div>
+				<div class="left-header">
+					<ul class="navi-level-1">
+						<li><a href="index.html" class="logo"><img src="images/Header/logo.png" class="img-responsive"
+									alt="Image"></a></li>
+					</ul>
+				</div><!-- End Left Header -->
+				<nav>
+					<ul class="navi-level-1 hover-style-2 main-navi">
+						<li class="has-sub"><a href="index.html"><span>Home</span></a>
+						</li>
+						<li class="has-sub"><a href="project.html"><span>Projects</span></a>
+						</li>
+						<li class="has-sub"><a href="service.html"><span>Services</span></a>
+						</li>
+						<li><a href="about.html"><span>About </span></a></li>
+						<li class="has-sub"><a href="blog.html"><span>Blog</span></a>
+						</li>
+						<li class="has-sub"><a href="contact.html"><span>Contact Us</span></a>
+						</li>
+
+					</ul>
+				</nav><!-- End Nav -->
+				<div class="right-header">
+					<ul class="navi-level-1 sub-navi seperator-horizonal-line hover-style-4">
+						<li class="header-tel"><a class="tel-header" href="#">TOLL FREE: 800 345 6889</a></li>
+
+
+						<!-- Testing Search Box -->
+						<li><a href="#"><span aria-hidden="true" class="icon_bag_alt"></span>
+							</a>
+						</li>
+						<li>
+							<a href="#" data-toggle="modal" data-target="#myModal" id="btn-search"
+								class="reset-btn btn-in-navi"><span aria-hidden="true" class="icon_search"></span></a>
+						</li>
+						<li>
+							<a href="#/" class="mm-toggle">
+								<span aria-hidden="true" class="icon_menu"></span>
+							</a>
+						</li>
+					</ul>
+
+				</div><!-- End Right Header -->
+			</header>
+			<!-- End  Header -->
+			<!-- End  Header -->
+
+			<section>
+				<div class="sub-header sub-header-1 sub-header-blog-grid fake-position">
+					<div class="sub-header-content">
+						<h2 class="text-cap white-text">Blog</h2>
+						<ol class="breadcrumb breadcrumb-arc text-cap">
+							<li>
+								<a href="#">Home</a>
+							</li>
+							<li class="active">Blog</li>
+						</ol>
+					</div>
+				</div>
+			</section>
+			<!-- End Section Sub Header -->
+			<section class="padding">
+				<div class="container">
+					<div class="row">
+						<div class="blog-warp blog-grid-3-col clearfix">
+							<div class="blogFilter blog-terms line-effect-2">
+								<a href="#" data-filter="*" class="current text-cap">
+									<h4>All categories</h4>
+								</a>
+								<a href="#" data-filter=".interior" class="text-cap">
+									<h4>interior design</h4>
+								</a>
+								<a href="#" data-filter=".Furniture" class="text-cap">
+									<h4>Furniture + accessories</h4>
+								</a>
+								<a href="#" data-filter=".Ecommercial" class="text-cap">
+									<h4>Ecommercial</h4>
+								</a>
+								<a href="#" data-filter=".Art" class="text-cap">
+									<h4>Art Decor</h4>
+								</a>
+							</div> <!-- End Project Fillter -->
+							<div class="clearfix blogContainer blog-grid-3-col-container">
+
+								<div class="element-item  interior">
+
+									<article>
+										<figure class="latest-blog-post-img">
+											<a href="blogDetail.html">
+												<img src="images/Blog/1.jpg" class="img-responsive" alt="Image">
+											</a>
+
+										</figure>
+										<div class="latest-blog-post-description">
+											<a href="blogDetail.html">
+												<h3>2016 Interior Design Trends</h3>
+											</a>
+											<div class="latest-blog-post-data">
+												<p class="tags text-cap">
+													<a href="#">Interior Design </a>,
+													<a href="#">Art Decor </a>
+												</p>
+											</div>
+											<div class="latest-blog-post-date-2  text-cap">
+												<span class="month">May</span>
+												<span class="day">21,</span>
+												<span class="year">2016</span>
+											</div>
+											<p>Ut condimentum, mi id pulvinar eleifend, dolor massa scelerisque justo,
+												quis rhoncus velit tellus vitae lectus.</p>
+
+										</div>
+									</article>
+								</div>
+
+								<div class="element-item interior ">
+									<article>
+										<figure class="latest-blog-post-img">
+											<a href="blogDetail.html">
+												<img src="images/Blog/2.jpg" class="img-responsive" alt="Image">
+											</a>
+
+										</figure>
+										<div class="latest-blog-post-description">
+											<a href="blogDetail.html">
+												<h3>5 Small Apartments Showcase The Flexibility Of Compact Design</h3>
+											</a>
+											<div class="latest-blog-post-data">
+												<p class="tags text-cap">
+													<a href="#">Living Room </a>,
+													<a href="#">Art Decor </a>
+												</p>
+											</div>
+											<div class="latest-blog-post-date-2  text-cap">
+												<span class="month">May</span>
+												<span class="day">21,</span>
+												<span class="year">2016</span>
+											</div>
+
+											<p>Morbi vehicula a nibh in commodo. Aliquam quis dolor eget lectus pulvinar
+												eu rhoncus ligula. Ut leo mauris, molestie.</p>
+										</div>
+									</article>
+								</div>
+
+								<div class="element-item Furniture">
+									<article>
+										<figure class="latest-blog-post-img">
+											<a href="blogDetail.html">
+												<img src="images/Blog/3.jpg" class="img-responsive" alt="Image">
+											</a>
+
+										</figure>
+										<div class="latest-blog-post-description">
+											<a href="blogDetail.html">
+												<h3>5 Small Apartments Showcase The Flexibility Of Compact Design</h3>
+											</a>
+											<div class="latest-blog-post-data">
+												<p class="tags text-cap">
+													<a href="#">Ecommerce </a>,
+													<a href="#">Art Decor </a>
+												</p>
+											</div>
+											<div class="latest-blog-post-date-2  text-cap">
+												<span class="month">May</span>
+												<span class="day">02,</span>
+												<span class="year">2016</span>
+											</div>
+
+											<p>Morbi vehicula a nibh in commodo. Aliquam quis dolor eget lectus pulvinar
+												eu rhoncus ligula. Ut leo mauris, molestie.</p>
+										</div>
+									</article>
+								</div>
+
+								<div class="element-item Furniture ">
+									<article>
+										<figure class="latest-blog-post-img">
+											<a href="blogDetail.html">
+												<img src="images/Blog/4.jpg" class="img-responsive" alt="Image">
+											</a>
+
+										</figure>
+										<div class="latest-blog-post-description">
+											<a href="blogDetail.html">
+												<h3>Small Home Designs Under 50 Square Meters</h3>
+											</a>
+											<div class="latest-blog-post-data">
+												<p class="tags text-cap">
+													<a href="#">Furniture + Accessories </a>,
+													<a href="#">Art Decor </a>
+												</p>
+											</div>
+											<div class="latest-blog-post-date-2  text-cap">
+												<span class="month">May</span>
+												<span class="day">15,</span>
+												<span class="year">2016</span>
+											</div>
+											<p>Etiam ac elementum purus, et aliquet velit. Morbi finibus tellus sit amet
+												nisl pharetra,</p>
+
+										</div>
+									</article>
+								</div>
+
+								<div class="element-item Ecommercial">
+									<article>
+										<figure class="latest-blog-post-img">
+											<a href="blogDetail.html">
+												<img src="images/Blog/5.jpg" class="img-responsive" alt="Image">
+											</a>
+
+										</figure>
+										<div class="latest-blog-post-description">
+											<a href="blogDetail.html">
+												<h3>10 Of The Best Housewarming Gifts</h3>
+											</a>
+											<div class="latest-blog-post-data">
+												<p class="tags text-cap">
+													<a href="#">Kitchen Room </a>,
+													<a href="#">Art Decor </a>
+												</p>
+											</div>
+											<div class="latest-blog-post-date-2  text-cap">
+												<span class="month">May</span>
+												<span class="day">11,</span>
+												<span class="year">2016</span>
+											</div>
+											<p>Morbi vehicula a nibh in commodo. Aliquam quis dolor eget lectus pulvinar
+												eu rhoncus ligula. Ut leo mauris, molestie.</p>
+
+										</div>
+									</article>
+								</div>
+
+								<div class="element-item Ecommercial">
+									<article>
+										<figure class="latest-blog-post-img">
+											<a href="blogDetail.html">
+												<img src="images/Blog/6.jpg" class="img-responsive" alt="Image">
+											</a>
+
+										</figure>
+										<div class="latest-blog-post-description">
+											<a href="blogDetail.html">
+												<h3>10 Of The Best Housewarming Gifts</h3>
+											</a>
+											<div class="latest-blog-post-data">
+												<p class="tags text-cap">
+													<a href="#">Interior Design </a>,
+													<a href="#">Art Decor </a>
+												</p>
+											</div>
+											<div class="latest-blog-post-date-2  text-cap">
+												<span class="month">May</span>
+												<span class="day">21,</span>
+												<span class="year">2016</span>
+											</div>
+											<p>Etiam ac elementum purus, et aliquet velit. Morbi finibus tellus sit amet
+												nisl pharetra,</p>
+
+										</div>
+									</article>
+								</div>
+
+								<div class="element-item Art ">
+									<article>
+										<figure class="latest-blog-post-img">
+											<a href="blogDetail.html">
+												<img src="images/Blog/7.jpg" class="img-responsive" alt="Image">
+											</a>
+
+										</figure>
+										<div class="latest-blog-post-description">
+											<a href="blogDetail.html">
+												<h3>4 Luxury Bathroom With Unique WallDetails Awwards</h3>
+											</a>
+											<div class="latest-blog-post-data">
+												<p class="tags text-cap">
+													<a href="#">Interior Design </a>,
+													<a href="#">Art Decor </a>
+												</p>
+											</div>
+											<div class="latest-blog-post-date-2  text-cap">
+												<span class="month">May</span>
+												<span class="day">21,</span>
+												<span class="year">2016</span>
+											</div>
+											<p>Cras egestas elit risus, sit amet porttitor urna viverra ut. Nunc
+												sagittis finibus pretium.</p>
+
+										</div>
+									</article>
+								</div>
+
+								<div class="element-item Art">
+									<article>
+										<figure class="latest-blog-post-img">
+											<a href="blogDetail.html">
+												<img src="images/Blog/8.jpg" class="img-responsive" alt="Image">
+											</a>
+
+										</figure>
+										<div class="latest-blog-post-description">
+											<a href="blogDetail.html">
+												<h3>Shopping Mall Interior Design</h3>
+											</a>
+											<div class="latest-blog-post-data">
+												<p class="tags text-cap">
+													<a href="#">Interior Design </a>,
+													<a href="#">Art Decor </a>
+												</p>
+											</div>
+											<div class="latest-blog-post-date-2  text-cap">
+												<span class="month">May</span>
+												<span class="day">21,</span>
+												<span class="year">2016</span>
+											</div>
+											<p>Morbi vehicula a nibh in commodo. Aliquam quis dolor eget lectus pulvinar
+												eu rhoncus ligula. Ut leo mauris, molestie.</p>
+
+										</div>
+									</article>
+								</div>
+
+								<div class="element-item  Furniture">
+									<article>
+										<figure class="latest-blog-post-img">
+											<a href="blogDetail.html">
+												<img src="images/Blog/9.jpg" class="img-responsive" alt="Image">
+											</a>
+
+										</figure>
+										<div class="latest-blog-post-description">
+											<a href="blogDetail.html">
+												<h3>Fashion Shop Interior Design</h3>
+											</a>
+											<div class="latest-blog-post-data">
+												<p class="tags text-cap">
+													<a href="#">Interior Design, </a>,
+													<a href="#">Art Decor </a>
+												</p>
+											</div>
+											<div class="latest-blog-post-date-2  text-cap">
+												<span class="month">May</span>
+												<span class="day">21,</span>
+												<span class="year">2016</span>
+											</div>
+											<p>Cras egestas elit risus, sit amet porttitor urna viverra ut. Nunc
+												sagittis finibus pretium.</p>
+
+										</div>
+									</article>
+								</div>
+
+								<div class="element-item Furniture ">
+									<article>
+										<figure class="latest-blog-post-img">
+											<a href="blogDetail.html">
+												<img src="images/Blog/10.jpg" class="img-responsive" alt="Image">
+											</a>
+
+										</figure>
+										<div class="latest-blog-post-description">
+											<a href="blogDetail.html">
+												<h3>40 Unique Modern Flatware Sets That You Can Buy Right Now</h3>
+											</a>
+											<div class="latest-blog-post-data">
+												<p class="tags text-cap">
+													<a href="#">Ecommerce, </a>,
+													<a href="#">Art Decor </a>
+												</p>
+											</div>
+											<div class="latest-blog-post-date-2  text-cap">
+												<span class="month">May</span>
+												<span class="day">21,</span>
+												<span class="year">2016</span>
+											</div>
+											<p>Donec maximus, erat vitae hendrerit consectetur, ex ante lacinia massa,
+												quis rhoncus velit tellus vitae lectus.</p>
+
+										</div>
+									</article>
+								</div>
+
+								<div class="element-item Ecommercial">
+									<article>
+										<figure class="latest-blog-post-img">
+											<a href="blogDetail.html">
+												<img src="images/Blog/11.jpg" class="img-responsive" alt="Image">
+											</a>
+
+										</figure>
+										<div class="latest-blog-post-description">
+											<a href="blogDetail.html">
+												<h3>20 Beautiful Examples Of Bathroom With Attached Wardrobes</h3>
+											</a>
+											<div class="latest-blog-post-data">
+												<p class="tags text-cap">
+													<a href="#">Living room, </a>,
+													<a href="#">Art Decor </a>
+												</p>
+											</div>
+											<div class="latest-blog-post-date-2  text-cap">
+												<span class="month">May</span>
+												<span class="day">21,</span>
+												<span class="year">2016</span>
+											</div>
+											<p>Morbi vehicula a nibh in commodo. Aliquam quis dolor eget lectus pulvinar
+												eu rhoncus ligula. Ut leo mauris, molestie.</p>
+
+										</div>
+									</article>
+								</div>
+
+								<div class="element-item Ecommercial ">
+									<article>
+										<figure class="latest-blog-post-img">
+											<a href="blogDetail.html">
+												<img src="images/Blog/12.jpg" class="img-responsive" alt="Image">
+											</a>
+
+										</figure>
+										<div class="latest-blog-post-description">
+											<a href="blogDetail.html">
+												<h3>50 Unique Decorative Vases To Beautify Your Home</h3>
+											</a>
+											<div class="latest-blog-post-data">
+												<p class="tags text-cap">
+													<a href="#">Bathroom,</a>,
+													<a href="#">Art Decor </a>
+												</p>
+											</div>
+											<div class="latest-blog-post-date-2  text-cap">
+												<span class="month">May</span>
+												<span class="day">21,</span>
+												<span class="year">2016</span>
+											</div>
+											<p>Donec maximus, erat vitae hendrerit consectetur, ex ante lacinia massa,
+												quis rhoncus velit tellus vitae lectus.</p>
+
+										</div>
+									</article>
+								</div>
+							</div> <!-- End project Container -->
+						</div> <!-- End  -->
+					</div>
+				</div>
+			</section>
+			<!-- End Section Isotop Lastest Project -->
+
+
+
+			<footer class="footer-v1">
+				<div class="footer-left">
+					<a href="index.html">
+						<img src="images/Header/logo-invest.png" class="img-responsive" alt="Image">
+					</a>
+				</div>
+				<!-- End Left Footer -->
+				<nav>
+					<ul>
+						<li>
+							<a class="text-cap" href="#">Gallery</a>
+						</li>
+						<li>
+							<a class="text-cap" href="#">Products</a>
+						</li>
+						<li>
+							<a class="text-cap" href="#">News</a>
+						</li>
+						<li>
+							<a class="text-cap" href="#">About</a>
+						</li>
+						<li>
+							<a class="text-cap" href="#">Privacy Policy</a>
+						</li>
+					</ul>
+				</nav>
+				<!-- End Nav Footer -->
+				<div class="footer-right">
+					<ul class="social social-footer">
+						<li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+						<li class="youtube"><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+						<li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+					</ul>
+				</div>
+				<!-- End Right Footer -->
+			</footer>
+			<!-- End Footer -->
+
+			<section class="copyright">
+				<p>Copyright © 2016 Designed by <a href="#">AuThemes</a>. All rights reserved.</p>
+			</section>
+		</div>
+	</div>
+	<!-- End page -->
+
+	<a id="to-the-top"><i class="fa fa-angle-up"></i></a>
+	<!-- Back To Top -->
+	<!-- SCRIPT -->
+	<script src="js/vendor/jquery.min.js"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script src="js/plugins/wow.min.js"></script>
+	<script type="text/javascript" src="js/plugins/skrollr.min.js"></script>
+	<script src="js/plugins/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
+	<!-- Switcher
+    ================================================== -->
+	<script src="switcher/demo.js"></script>
+
+	<!-- Mobile Menu
+    ================================================== -->
+	<script src="js/plugins/jquery.mobile-menu.js"></script>
+
+	<!-- Initializing the isotope
+    ================================================== -->
+	<script src="js/plugins/isotope.pkgd.min.js"></script>
+	<script src="js/plugins/custom-isotope.js"></script>
+
+	<!-- PreLoad
+    ================================================== -->
+	<script type="text/javascript" src="js/plugins/royal_preloader.min.js"></script>
+	<script type="text/javascript">
+		(function ($) {
+			"use strict";
+			Royal_Preloader.config({
+				mode: 'logo', // 'number', "text" or "logo"
+				logo: 'images/Header/logo.png',
+				timeout: 1,
+				showInfo: false,
+				opacity: 1,
+				background: ['#FFFFFF']
+			});
+		})(jQuery);
+	</script>
+
+	<!-- Global Js
+    ================================================== -->
+	<script src="js/plugins/custom.js"></script>
+</body>
+
+</html>
