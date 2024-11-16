@@ -1,6 +1,6 @@
-jQuery(document).ready(function() {
-	"use strict";		
-    
+jQuery(document).ready(function () {
+	"use strict";
+
 	/**
 	 * downCount: Simple Countdown clock with offset
 	 * Author: Sonny T. <hi@sonnyt.com>, sonnyt.com
@@ -9,9 +9,9 @@ jQuery(document).ready(function() {
 	(function ($) {
 		$.fn.downCount = function (options, callback) {
 			var settings = $.extend({
-					date: null,
-					offset: null
-				}, options);
+				date: null,
+				offset: null
+			}, options);
 
 			// Throw error if date is not set
 			if (!settings.date) {
@@ -38,7 +38,7 @@ jQuery(document).ready(function() {
 				var utc = date.getTime() + (date.getTimezoneOffset() * 60000);
 
 				// set new Date object
-				var new_date = new Date(utc + (3600000*settings.offset))
+				var new_date = new Date(utc + (3600000 * settings.offset))
 
 				return new_date;
 			};
@@ -46,7 +46,7 @@ jQuery(document).ready(function() {
 			/**
 			 * Main downCount function that calculates everything
 			 */
-			function countdown () {
+			function countdown() {
 				var target_date = new Date(settings.date), // set target date
 					current_date = currentDate(); // get fixed current date
 
@@ -75,18 +75,18 @@ jQuery(document).ready(function() {
 					minutes = Math.floor((difference % _hour) / _minute),
 					seconds = Math.floor((difference % _minute) / _second);
 
-					// fix dates so that it will show two digets
-					days = (String(days).length >= 2) ? days : '0' + days;
-					hours = (String(hours).length >= 2) ? hours : '0' + hours;
-					minutes = (String(minutes).length >= 2) ? minutes : '0' + minutes;
-					seconds = (String(seconds).length >= 2) ? seconds : '0' + seconds;
+				// fix dates so that it will show two digets
+				days = (String(days).length >= 2) ? days : '0' + days;
+				hours = (String(hours).length >= 2) ? hours : '0' + hours;
+				minutes = (String(minutes).length >= 2) ? minutes : '0' + minutes;
+				seconds = (String(seconds).length >= 2) ? seconds : '0' + seconds;
 
 				// based on the date change the refrence wording
 				var ref_days = (days === 1) ? 'day' : 'days',
 					ref_hours = (hours === 1) ? 'hour' : 'hours',
 					ref_minutes = (minutes === 1) ? 'minute' : 'minutes',
 					ref_seconds = (seconds === 1) ? 'second' : 'seconds';
-					
+
 
 				// set to DOM
 				container.find('.days').text(days);
@@ -99,23 +99,24 @@ jQuery(document).ready(function() {
 				container.find('.minutes_ref').text(ref_minutes);
 				container.find('.seconds_ref').text(ref_seconds);
 			};
-			
+
 			// start
 			var interval = setInterval(countdown, 1000);
 		};
 
-	})(jQuery);	
-	
-	(function($) { "use strict";      
-		//Timer
-		$('.countdown').downCount({
-		  date: '12/30/2016 12:00:00',
-		  offset: +10
-		}, function () {
-		  alert('WOOT WOOT, done!');
-		});		  
 	})(jQuery);
 
-});		
+	(function ($) {
+		"use strict";
+		//Timer
+		$('.countdown').downCount({
+			date: '12/30/2024 12:00:00',
+			offset: +10
+		}, function () {
+			alert('WOOT WOOT, done!');
+		});
+	})(jQuery);
+
+});
 
 
