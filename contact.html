@@ -211,59 +211,71 @@
 							<div class="col-md-12 ">
 								<div class="left-contact contact-form-1-cols">
 									<h3 class="text-cap"> Send Us a Message</h3>
-									<form class="form-inline form-contact-arc" name="contact" method="post"
-										action="https://templates.thememodern.com/architect/send_form_email.php">
+
+									<form class="form-inline form-contact-arc" name="contact" method="post">
 										<div class="row">
 											<div class="form-group col-md-4 ">
 												<input type="text" class="form-control" name="yourName" id="yourName"
-													placeholder="Your Name">
+													placeholder="Your Name" required>
 											</div>
 											<div class="form-group col-md-4">
 												<input type="email" class="form-control" name="yourEmail" id="yourEmail"
-													placeholder="Your Email">
+													placeholder="Your Email" required>
 											</div>
 											<div class="form-group col-md-4">
 												<input type="text" class="form-control" name="yourPhone"
-													id="phoneNumber" placeholder="Phone Number">
+													id="phoneNumber" placeholder="Phone Number" required>
 											</div>
 										</div>
 										<div class="input-content padding-top-20">
 											<div class="form-group form-textarea">
 												<textarea id="textarea" class="form-control" name="comments" rows="6"
-													placeholder="Your Messages"></textarea>
+													placeholder="Your Messages" required></textarea>
 											</div>
 										</div>
-										<button class="ot-btn btn-main-color btn-long text-cap btn-submit">Send
+										<button onclick="event.preventDefault();  generateMailto();" type="button"
+											class="ot-btn btn-main-color btn-long text-cap btn-submit">Send
 											Mail</button>
-									</form> <!-- End Form -->
+
+									</form>
+
+
+									<!-- End Form -->
+
+
 								</div> <!-- End col -->
 							</div>
-							<div class="col-md-6 ">
-								<div class="right-contact">
+							<div class=" col-md-6 ">
+								<div class=" right-contact">
 									<h3 class="text-cap">Contact Info</h3>
 									<p>
-										Welcome to our space! We’re here to provide exceptional service and support.
-										Visit us in Kochi or reach out during our working hours. We look forward to
+										Welcome to our space! We’re here to provide exceptional service and
+										support.
+										Visit us in Kochi or reach out during our working hours. We look forward
+										to
 										assisting you!
 									</p>
 									<ul class="address">
 										<li>
 											<p><i class="fa fa-home" aria-hidden="true"></i><span>
 													&nbsp;&nbsp; Door No.
-													55/216, 1st floor, Thekkanath Building, Near south over bridge,
+													55/216, 1st floor, Thekkanath Building, Near south over
+													bridge,
 													Kochi-
 													682036</span>
 											</p>
 										</li>
 										<li>
-											<p><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp; 8891150468</p>
+											<p><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;
+												8891150468</p>
 										</li>
 										<li>
 											<p><i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;&nbsp;
 												upstylespace@gmail.com</p>
 										</li>
 										<li>
-											<p><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;&nbsp; Mon-Sat
+											<p><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;&nbsp;
+												Mon-Sat
 												10:00 am – 6:30 pm</p>
 										</li>
 									</ul>
@@ -321,11 +333,39 @@
 			</section>
 		</div>
 	</div>
+
 	<!-- End page -->
 
 	<a id="to-the-top"><i class="fa fa-angle-up"></i></a>
 	<!-- Back To Top -->
 	<!-- SCRIPT -->
+	<script type="text/javascript">
+		function generateMailto() {
+			const name = document.getElementById("yourName").value;
+			const email = document.getElementById("yourEmail").value;
+			const phone = document.getElementById("phoneNumber").value;
+			const message = document.getElementById("textarea").value;
+
+			// Construct the mailto link
+			const subject = `New message from ${name}`;
+			const body = `
+                Name: ${name}
+                Email: ${email}
+                Phone: ${phone}
+                Message: ${message}
+			`;
+
+			const mailtoLink = `mailto:manuahnas@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+			window.location.href = mailtoLink;
+
+			document.getElementById('yourName').value = '';
+			document.getElementById('yourEmail').value = '';
+			document.getElementById('phoneNumber').value = '';
+			document.getElementById('textarea').value = '';
+		}
+	</script>
+
 	<script src="js/vendor/jquery.min.js"></script>
 	<script src="js/vendor/bootstrap.min.js"></script>
 	<script src="js/plugins/jquery.mCustomScrollbar.concat.min.js"></script>
