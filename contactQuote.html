@@ -183,30 +183,32 @@
 							<div class="col-md-6 ">
 								<div class="left-contact">
 									<h3 class="text-cap"> Send Us a Message</h3>
-									<form class="form-inline form-contact-arc" name="contact" method="post" action="">
+									<form class="form-inline form-contact-arc" name="contact" method="post"
+										action="send_email.php">
 										<div class="row">
-											<div class="form-group col-sm-12 ">
+											<div class="form-group col-sm-12">
 												<input type="text" class="form-control" name="yourName" id="yourName"
-													placeholder="Your Name">
+													placeholder="Your Name" required>
 											</div>
 											<div class="form-group col-sm-12">
 												<input type="email" class="form-control" name="yourEmail" id="yourEmail"
-													placeholder="Your Email">
+													placeholder="Your Email" required>
 											</div>
 											<div class="form-group col-sm-12">
 												<input type="text" class="form-control" name="yourPhone"
-													id="phoneNumber" placeholder="Phone Number">
+													id="phoneNumber" placeholder="Phone Number" required>
 											</div>
 										</div>
 										<div class="input-content">
 											<div class="form-group form-textarea">
 												<textarea id="textarea" class="form-control" name="comments" rows="6"
-													placeholder="Your Messages"></textarea>
+													placeholder="Your Messages" required></textarea>
 											</div>
 										</div>
-										<button class="ot-btn btn-main-color btn-long text-cap btn-submit">Send
-											Mail</button>
+										<button class="ot-btn btn-main-color btn-long text-cap btn-submit"
+											type="submit">Send Mail</button>
 									</form>
+
 									<!-- End Form -->
 								</div> <!-- End col -->
 							</div>
