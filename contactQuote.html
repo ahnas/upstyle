@@ -324,6 +324,13 @@
 	<!-- SCRIPT -->
 
 	<script>
+
+		function formatDate(date) {
+			const options = { month: 'short', day: '2-digit', year: 'numeric' };
+			const formattedDate = date.toLocaleDateString('en-US', options);
+			const [month, day, year] = formattedDate.split(' ');
+			return `${day.replace(',', '')}/${month}/${year}`;
+		}
 		function sendWhatsApp() {
 			var name = document.getElementById('yourName').value;
 			var email = document.getElementById('yourEmail').value;
@@ -331,15 +338,12 @@
 			var message = document.getElementById('textarea').value;
 
 			const whatsappMessage =
-				`*Message from UpStyle Contact Form*%0A%0A` +
-				`*Name:* ${encodeURIComponent(name)}%0A` +
-				`*Email:* ${encodeURIComponent(email)}%0A` +
-				`*Phone:* ${encodeURIComponent(phone)}%0A` +
-				`*Message:*%0A${encodeURIComponent(message)}%0A%0A` +
-				`---%0A` +
-				`*Sent via UpStyle Website*%0A` +
-				`*Date:* ${new Date().toLocaleDateString()}%0A` +
-				`*Time:* ${new Date().toLocaleTimeString()}`;
+				`*Message from UpStyle Form*%0A` +
+				`_${formatDate(new Date())} at ${new Date().toLocaleTimeString()}_%0A%0A` +
+				`Name: *${encodeURIComponent(name)}*%0A` +
+				`Email: *${encodeURIComponent(email)}*%0A` +
+				`Phone: *${encodeURIComponent(phone)}*%0A` +
+				`Message: *${message}*%0A`;
 
 
 			// Replace 'your-phone-number' with the actual number
