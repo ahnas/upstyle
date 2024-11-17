@@ -343,7 +343,8 @@
 				`Name: *${encodeURIComponent(name)}*%0A` +
 				`Email: *${encodeURIComponent(email)}*%0A` +
 				`Phone: *${encodeURIComponent(phone)}*%0A` +
-				`Message: *${message}*%0A`;
+				`*Message:*%0A${message.replace(/\n/g, '%0A')}%0A` +
+				`---%0A`;
 
 
 			// Replace 'your-phone-number' with the actual number
