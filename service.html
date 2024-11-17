@@ -162,18 +162,20 @@
             <!-- End Right Header -->
          </header>
          <!-- End  Header -->
-         <section>
+
+
+         <section id="service-content">
             <div class="sub-header sub-header-1 sub-header-our-services fake-position">
                <div class="sub-header-content">
-                  <h2 class="text-cap white-text">Residential Design</h2>
-                  <ol class="breadcrumb breadcrumb-arc text-cap">
+                  <h2 class="text-cap white-text" id="service-title">Residential Design</h2>
+                  <ol class="breadcrumb breadcrumb-arc text-cap" id="service-breadcrumb">
                      <li>
                         <a href="index.html">Home</a>
                      </li>
                      <li>
                         <a href="servicesList.html">Our Services</a>
                      </li>
-                     <li class="active">Residential design</li>
+                     <li class="active" id="service-breadcrumb-active">Residential design</li>
                   </ol>
                </div>
             </div>
@@ -184,35 +186,19 @@
                <div class="row">
                   <div class="sidebar-services sidebar-left">
                      <ul class="sidebar-style-2">
-                        <li class="active"><a href="service.html">Residential Design</a></li>
-                        <li><a href="#">Commercial Design</a></li>
-                        <li><a href="#">Office Design</a></li>
-                        <li><a href="#">Hospitality Design</a></li>
-                        <li><a href="#">Styling & Photoshoot Design</a></li>
+                        <li class="active"><a href="service.html?service=residential">Residential Design</a></li>
+                        <li><a href="service.html?service=commercial">Commercial Design</a></li>
+                        <li><a href="service.html?service=office">Office Design</a></li>
+                        <li><a href="service.html?service=hospitality">Hospitality Design</a></li>
+                        <li><a href="service.html?service=styling">Styling & Photoshoot Design</a></li>
                      </ul>
                      <div class="box-question-sidebar text-center">
                         <p>Have questions about our services?</p>
                         <a href="contact.html" class="ot-btn btn-main-color text-cap">Contact Us</a>
                      </div>
                   </div>
-                  <div class="main-services main-services-right">
-                     <div class="col-md-6">
-                        <p>Proin molestie ipsum eleifend nisl lobortis convallis. Sed tempus sem sodales nibh eleifend
-                           congue. Phasellus euismod mauris quis enim vulputate dictum. Etiam placerat imperdiet
-                           sagittis. Maecenas sed nunc leo. Phasellus placerat ex lectus, at porta diam vehicula sed.
-                           Fusce ut sem dapibus, eleifend massa a, accumsan nunc. Praesent feugiat, turpis ut fringilla
-                           bibendum, urna justo aliquam dui, ut vulputate risus nulla ac risus.</p>
-                        <p>Integer vitae nunc felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-                           eu elit in libero maximus cursus. Sed a leo ex. Proin in nunc sagittis metus eleifend dictum
-                           sed vitae nisl. </p>
-                        <p>Ut auctor ornare tortor sit amet viverra. Maecenas lobortis aliquet nunc, sed cursus nibh
-                           convallis eu. Duis vitae arcu at ante tincidunt facilisis nec eget erat. Cras bibendum
-                           consequat dui sit amet malesuada. In interdum ante vel eros varius elementum. </p>
-                     </div>
-                     <div class="col-md-6">
-                        <img src="images/Services/detail-1.jpg" class="img-responsive" alt="Image">
-                        <img src="images/Services/detail-2.jpg" class="img-responsive" alt="Image">
-                     </div>
+                  <div class="main-services main-services-right" id="service-details">
+                     <!-- Content will be injected here by JavaScript -->
                   </div>
                </div>
             </div>
@@ -266,6 +252,115 @@
    <a id="to-the-top"><i class="fa fa-angle-up"></i></a>
    <!-- Back To Top -->
    <!-- SCRIPT -->
+
+   <script>
+      // JavaScript to dynamically load service content
+      const services = {
+         residential: {
+            title: "Residential Design",
+            content: `
+                  <div class="col-md-6">
+                      <p>Residential Design Proin molestie ipsum eleifend nisl lobortis convallis. Sed tempus sem sodales nibh eleifend
+                         congue. Phasellus euismod mauris quis enim vulputate dictum. Etiam placerat imperdiet
+                         sagittis. Maecenas sed nunc leo. Phasellus placerat ex lectus, at porta diam vehicula sed.
+                         Fusce ut sem dapibus, eleifend massa a, accumsan nunc. Praesent feugiat, turpis ut fringilla
+                         bibendum, urna justo aliquam dui, ut vulputate risus nulla ac risus.</p>
+                      
+                  </div>
+                  <div class="col-md-6">
+                      <img src="images/Services/detail-1.jpg" class="img-responsive" alt="Image">
+                      <img src="images/Services/detail-2.jpg" class="img-responsive" alt="Image">
+                  </div>
+              `
+         },
+         commercial: {
+            title: "Commercial Design",
+            content: `
+                  <div class="col-md-6">
+                      <p>Commercial design focuses on creating functional and aesthetically pleasing spaces for businesses.</p>
+                      <p>From offices to retail spaces, we ensure that the design meets the needs of both the business and its customers.</p>
+                  </div>
+                  <div class="col-md-6">
+                      <img src="images/Services/detail-1.jpg" class="img-responsive" alt="Image">
+                      <img src="images/Services/detail-1.jpg" class="img-responsive" alt="Image">
+                  </div>
+              `
+         },
+         office: {
+            title: "Office Design",
+            content: `
+                  <div class="col-md-6">
+                      <p>Our office design services create productive environments that promote collaboration and efficiency.</p>
+                      <p>We focus on ergonomic furniture and modern layouts that adapt to your team's needs.</p>
+                  </div>
+                  <div class="col-md-6">
+                      <img src="images/Services/detail-1.jpg" class="img-responsive" alt="Image">
+                      <img src="images/Services/detail-1.jpg" class="img-responsive" alt="Image">
+                  </div>
+              `
+         },
+         hospitality: {
+            title: "Hospitality Design",
+            content: `
+                  <div class="col-md-6">
+                      <p>We specialize in hospitality design, crafting memorable experiences for guests in hotels and restaurants.</p>
+                      <p>Our designs reflect the unique identity of each establishment while ensuring comfort and functionality.</p>
+                  </div>
+                  <div class="col-md-6">
+                      <img src="images/Services/detail-3.jpg" class="img-responsive" alt="Image">
+                      <img src="images/Services/detail-4.jpg" class="img-responsive" alt="Image">
+                  </div>
+              `
+         },
+         styling: {
+            title: "Styling & Photoshoot Design",
+            content: `
+                  <div class="col-md-6">
+                      <p>Our styling and photoshoot design services focus on creating visually appealing setups for photo shoots.</p>
+                      <p>We ensure every detail is in place to enhance the overall aesthetic and meet your vision.</p>
+                  </div>
+                  <div class="col-md-6">
+                      <img src="images/Services/detail-5.jpg" class="img-responsive" alt="Image">
+                      <img src="images/Services/detail-6.jpg" class="img-responsive" alt="Image">
+                  </div>
+              `
+         }
+      };
+
+      function loadService() {
+         const urlParams = new URLSearchParams(window.location.search);
+         const service = urlParams.get('service') || 'residential'; // Default to residential
+
+         const serviceInfo = services[service];
+         if (serviceInfo) {
+            document.getElementById('service-title').innerText = serviceInfo.title;
+            document.getElementById('service-breadcrumb-active').innerText = serviceInfo.title;
+            document.getElementById('service-details').innerHTML = serviceInfo.content;
+
+            // Update active class in the sidebar
+            const sidebarLinks = document.querySelectorAll('.sidebar-style-2 li');
+            sidebarLinks.forEach(link => {
+               link.classList.remove('active'); // Remove active class from all links
+            });
+
+            // Add active class to the clicked link
+            const activeLink = Array.from(sidebarLinks).find(link => link.firstChild.href.includes(service));
+            if (activeLink) {
+               activeLink.classList.add('active');
+            }
+         } else {
+            // Handle case where service is not found
+            document.getElementById('service-title').innerText = "Service Not Found";
+            document.getElementById('service-details').innerHTML = "<p>The requested service does not exist.</p>";
+         }
+      }
+
+      // Load the correct service on page load
+      window.onload = loadService;
+   </script>
+
+
+
    <script src="js/vendor/jquery.min.js"></script>
    <script src="js/vendor/bootstrap.min.js"></script>
    <script src="js/plugins/jquery.mCustomScrollbar.concat.min.js"></script>
