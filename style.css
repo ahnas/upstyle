@@ -4268,6 +4268,7 @@ header ul {
 
 header .left-header .navi-level-1 li a.logo {
   padding: 0;
+  width: 70px;
 }
 
 .navi-level-1>li {
@@ -11226,7 +11227,7 @@ ul.list-link-footer li:hover:before {
 
   header .left-header .navi-level-1 li a.logo {
     padding: 0;
-    padding-top: 10px;
+    /* padding-top: 10px; */
   }
 
   header .left-header .navi-level-1 li a.logo img {
