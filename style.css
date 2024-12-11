@@ -119,6 +119,9 @@ ul.social li.active a {
   border-radius: 3px;
 }
 
+.cursor-pointer{
+  cursor: pointer;  
+}
 .btn-pill {
   border-radius: 25px;
 }
