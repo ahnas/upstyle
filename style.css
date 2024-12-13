@@ -119,9 +119,10 @@ ul.social li.active a {
   border-radius: 3px;
 }
 
-.cursor-pointer{
-  cursor: pointer;  
+.cursor-pointer {
+  cursor: pointer;
 }
+
 .btn-pill {
   border-radius: 25px;
 }
@@ -6045,6 +6046,8 @@ figure .ot-btn {
 .chooseus-full-width .chooseus-container {
   max-width: 100%;
   width: 100%;
+  display: flex;
+  flex-flow: wrap;
 }
 
 .chooseus-full-width .chooseus-container .chooseus-item {
