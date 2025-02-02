@@ -25,6 +25,13 @@
 		  ================================================== -->
 	<link rel="shortcut icon" href="favicon.png">
 </head>
+<style>
+	.select {
+		width: 100% !important;
+		height: 50px;
+		padding: 6px 12px;
+	}
+</style>
 
 <body>
 
@@ -194,24 +201,19 @@
 							<div class="col-md-6">
 								<div class="left-contact contact-form-1-cols">
 									<h3 class="text-cap">Join Our Team</h3>
-									<p>We are always on the lookout for passionate individuals who share our
-										commitment to innovation and excellence. If you're looking for a dynamic
-										and rewarding career, we invite you to explore the opportunities
-										available at our company.</p>
+									<p>We are always seeking passionate individuals who share our dedication to
+										innovation and excellence. If you're looking for a dynamic and fulfilling
+										career, we encourage you to explore the opportunities at our company. Send us an
+										email, and we will schedule an interview to assess your skills and see if you're
+										the right fit for our team.</p>
 									<h4>Current Openings</h4>
-									<ul>
-										<li><strong>Test1</strong> - Create cutting-edge solutions
-											for our clients. Proficiency in Python, JavaScript, and Cloud
-											Computing is required.</li>
-										<li><strong>Test2</strong> - Lead and manage projects from
-											conception to completion. Strong organizational skills and
-											experience with Agile methodologies are a must.</li>
-									</ul>
+									<ul id="job-list"></ul>
 
 									<h4>How to Apply</h4>
-									<p>If you're interested in any of the positions listed above, please submit
-										your application through the form on the right. We look forward to
-										reviewing your qualifications and getting in touch with you.</p>
+									<p>If you're interested in any of the positions listed above, please submit your
+										application through the form on the right and attach your portfolio along with
+										the application. We look forward to reviewing your qualifications and getting in
+										touch with you.</p>
 								</div>
 							</div>
 
@@ -240,6 +242,13 @@
 													placeholder="Enter your LinkedIn, Portfolio, or Website URL"
 													required>
 											</div>
+											<div class="form-group col-md-12 col-sm-6">
+												<select name="job" class="form-control select" id="jobRole">
+													<option value="">Select the job role</option>
+												</select>
+											</div>
+
+
 										</div>
 
 										<div class="input-content padding-top-20">
@@ -256,8 +265,6 @@
 
 								</div>
 							</div>
-
-
 
 
 						</div>
@@ -324,6 +331,40 @@
 	<a id="to-the-top"><i class="fa fa-angle-up"></i></a>
 	<!-- Back To Top -->
 	<!-- SCRIPT -->
+
+	<script>
+		const jobOpenings = [
+			{
+				"title": "Junior Architect or Interior Designer (0–1 year experience)",
+				"description": "Software Knowledge about AutoCAD, SketchUp, Enscape or Coohom and Assist with design drawings, develop 3D conceptual designs, Prepare design mock-ups and color boards, Research the different types of building materials, lighting fixtures and other products."
+			},
+			{
+				"title": "Draftsman (0–1 year experience)",
+				"description": "We are seeking a skilled AutoCAD Draftsman to join our team. The ideal candidate should have Good technical knowledge of materials such as plywood, laminates, slabs, and other interior design essentials."
+			},
+			{
+				"title": "Interior and Architectural Interns (Fresher)",
+				"description": "Basic knowledge about software like AutoCAD, SketchUp, Enscape",
+			},
+		];
+
+		const jobList = document.getElementById("job-list");
+		jobOpenings.forEach((job, index) => {
+			let li = document.createElement("li");
+			li.innerHTML = `<strong>${index + 1}. ${job.title}</strong> <br> <b><i>Key Responsibilities :</i></b> ${job.description}`;
+			jobList.appendChild(li);
+		});
+
+		// Job Titles for <select> Dropdown
+		const jobDropdown = document.getElementById("jobRole");
+		jobOpenings.forEach((job) => {
+			let option = document.createElement("option");
+			option.value = job.title;
+			option.textContent = job.title;
+			jobDropdown.appendChild(option);
+		});
+
+	</script>
 	<script>
 		function generateMailto() {
 			const name = document.getElementById("yourName").value;
@@ -331,13 +372,15 @@
 			const phone = document.getElementById("phoneNumber").value;
 			const message = document.getElementById("textarea").value;
 			const profileLink = document.getElementById("profilelink").value;
+			const jobRole = document.getElementById("jobRole").value;
 
 
-			const subject = `New Job Application from ${name}`;
+			const subject = `New Job Application for ${jobRole} from ${name}`;
 			const body = `
 			Name: ${name}
 			Email: ${email}
 			Phone: ${phone}
+			Job Role: ${jobRole}
 			Profile Link: ${profileLink}
 			Message: ${message}
 			`;
@@ -351,6 +394,7 @@
 			document.getElementById('phoneNumber').value = '';
 			document.getElementById('textarea').value = '';
 			document.getElementById('profilelink').value = '';
+			document.getElementById('jobRole').value = '';
 		}
 	</script>
 	<script src="js/vendor/jquery.min.js"></script>
