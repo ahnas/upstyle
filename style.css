@@ -5986,6 +5986,19 @@ figure .ot-btn {
   position: absolute;
 }
 
+.img-responsive:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.triangle-img-warp:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all 0.8s ease-in-out;
+
+}
+
 .tri {
   top: 28px;
   left: 28px;
